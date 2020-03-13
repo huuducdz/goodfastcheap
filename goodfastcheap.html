@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><p> Good </p>
+
+<label class="switch">
+
+    <input id="tot" type="checkbox" onclick="checkgood()" uncheck>
+
+    <span class="slider round"></span>
+
+</label>
+
+
+
+<p> Fast </p>
+
+<label class="switch">
+
+    <input id="nhanh" type="checkbox" onclick="checkfast()" uncheck>
+
+    <span class="slider round"></span>
+
+</label>
+
+
+
+<p> Cheap </p>
+
+<label class="switch">
+
+    <input id="re" type="checkbox" onclick="checkcheap()" uncheck>
+
+    <span class="slider round"></span>
+
+</label>
+
+<script>
+
+    let good= document.getElementById("tot");
+
+    let fast= document.getElementById("nhanh");
+
+    let cheap= document.getElementById("re");
+
+
+
+    function checkgood() {
+
+        if(good.checked && fast.checked) {
+
+            cheap.checked = false;
+
+        }
+
+    }
+
+    function checkfast() {
+
+        if(fast.checked && cheap.checked){
+
+            good.checked = false;
+
+        }
+
+    }
+
+    function checkcheap(){
+
+        if (cheap.checked && good.checked){
+
+            fast.checked = false;
+
+        }
+
+    }
+    </script>
+
+
+</body>
+</html>
